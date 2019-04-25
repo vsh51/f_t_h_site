@@ -1,0 +1,146 @@
+{% extends 'home/wrapper.html'%}
+
+{% block style %}
+<style>
+
+    .IMG{
+        position: absolute;
+        top: 300px;
+        left: 550px;
+    }
+
+    .div1{
+        background-color: black;
+        height: 100%;
+        width: 720px;
+        height: 720px;
+        opacity: 1;
+    }
+    #bt1{
+        width: 242px;
+        height: 242px;
+        border: 1px solid white;
+        opacity: 1;
+        margin: 0px;
+        padding: 0px;
+        cursor: pointer;
+        position: absolute;left:241px;top:241px;
+    }
+    #bt1:hover {
+        opacity: 0.7;
+    }
+    #btimg{
+
+    }
+    .img1{
+        width: 240px;
+        height: 240px;
+        border: 1px solid white;
+        position: absolute;left:241px;top:241px;
+        opacity: 1;
+    }
+    .img2{
+        width: 640px;
+        height: 630px;
+        z-index: 3;
+        border: 1px solid white;
+        position: absolute;left:41px;top:46px;
+    }
+</style>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+{% load static %}
+<script>
+          function show() {
+          document.getElementById("im1").hidden = false;
+          document.getElementById("im2").hidden = false;
+          document.getElementById("im3").hidden = false;
+          document.getElementById("im4").hidden = false;
+          document.getElementById("im5").hidden = false;
+          document.getElementById("im6").hidden = false;
+          document.getElementById("im7").hidden = false;
+          document.getElementById("im8").hidden = false;
+          document.getElementById("im9").hidden = false;
+
+          var start = Date.now();
+
+          var timer = setInterval(function() {
+
+              var timePassed = Date.now() - start;
+
+              if (timePassed >= 480) {
+                  clearInterval(timer);
+                  return;
+              }
+
+
+                draw(timePassed);
+          }, 20);
+
+          function draw(timePassed) {
+              im1.style.left = (246 - timePassed / 2) + 'px';
+              im1.style.top = (246 - timePassed / 2) + 'px';
+
+              im2.style.top = (246 - timePassed / 2) + 'px';
+
+              im3.style.left = (246 + timePassed / 2) + 'px';
+              im3.style.top = (246 - timePassed / 2) + 'px';
+
+              im4.style.left = (246 - timePassed / 2) + 'px';
+
+              im6.style.left = (246 + timePassed / 2) + 'px';
+
+              im7.style.left = (246 - timePassed / 2) + 'px';
+              im7.style.top = (246 + timePassed / 2) + 'px';
+
+              im8.style.top = (246 + timePassed / 2) + 'px';
+
+              im9.style.left = (246 + timePassed / 2) + 'px';
+              im9.style.top = (246 + timePassed / 2) + 'px';
+
+          }
+
+      }
+
+
+        function full(im) {
+            document.getElementById("d1").style.opacity = 0.8;
+            im.hidden = false;
+        }
+
+        function unfull(im) {
+            document.getElementById("d1").style.opacity = 1;
+            im.hidden = true;
+        }
+</script>
+  <div class="IMG">
+    <div class="div1" id="d1">
+      <img class="img1" id="im1" src="{% static 'home/images/P1.jpg' %}" hidden="" onclick="full(im21)">
+      <img class="img1" id="im2" src="{% static 'home/images/P2.jpg' %}" hidden="" onclick="full(im22)">
+      <img class="img1" id="im3" src="{% static 'home/images/P3.jpg' %}" hidden="" onclick="full(im23)">
+      <img class="img1" id="im4" src="{% static 'home/images/P4.jpg' %}" hidden="" onclick="full(im24)">
+      <img class="img1" id="im5" src="{% static 'home/images/P5.jpg' %}" hidden="" onclick="full(im25)">
+      <img class="img1" id="im6" src="{% static 'home/images/P6.jpg' %}" hidden="" onclick="full(im26)">
+      <img class="img1" id="im7" src="{% static 'home/images/P7.jpg' %}" hidden="" onclick="full(im27)">
+      <img class="img1" id="im8" src="{% static 'home/images/P8.jpg' %}" hidden="" onclick="full(im28)">
+      <img class="img1" id="im9" src="{% static 'home/images/P9.jpg' %}" hidden="" onclick="full(im29)">
+
+      <button id="bt1" onclick="style.display='none', show()"><img id="btimg" src="{% static 'home/images/ButtonImg.JPG' %}"></button>
+    </div>
+
+    <img class="img2" id="im21" src="{% static 'home/images/P1.PNG' %}" hidden="" onclick="unfull(im21)">
+    <img class="img2" id="im22" src="{% static 'home/images/P2.PNG' %}" hidden="" onclick="unfull(im22)">
+    <img class="img2" id="im23" src="{% static 'home/images/P3.PNG' %}" hidden="" onclick="unfull(im23)">
+    <img class="img2" id="im24" src="{% static 'home/images/P4.PNG' %}" hidden="" onclick="unfull(im24)">
+    <img class="img2" id="im25" src="{% static 'home/images/P5.PNG' %}" hidden="" onclick="unfull(im25)">
+    <img class="img2" id="im26" src="{% static 'home/images/P6.PNG' %}" hidden="" onclick="unfull(im26)">
+    <img class="img2" id="im27" src="{% static 'home/images/P7.PNG' %}" hidden="" onclick="unfull(im27)">
+    <img class="img2" id="im28" src="{% static 'home/images/P8.PNG' %}" hidden="" onclick="unfull(im28)">
+    <img class="img2" id="im29" src="{% static 'home/images/P9.PNG' %}" hidden="" onclick="unfull(im29)">
+  </div>
+{% endblock %}

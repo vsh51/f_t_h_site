@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <link rel="shortcut icon" href="{% static 'home/images/logo.jpg' %}" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+        {% block style %}
+
+        {% endblock %}
+    <style>
+
+        .footer{
+            position: fixed;
+            left: 300px;
+            top; 1000px;
+            }
+
+        .div-nav{
+            position: absolute;
+            padding-left: 10px;
+            padding-top: 30px;
+            }
+
+        ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 300px;
+          background-color: #000000;
+            }
+
+        li a{
+          font-size: 24pt;
+          display: block;
+          color: #ffffff;
+          padding: 30px 30px;
+          text-decoration: none;
+            }
+
+        li a:hover {
+            background-color: #ffffff;
+            color: black;
+            }
+
+        .top-pan{
+            padding-left: 130px;
+            padding-right: 130px;
+            }
+
+        .img{
+            position: fixed;
+            padding-top: 50px;
+            padding-left: 20px;
+            display:inline-block;
+            border:0;
+            width:200px;
+            height:200px;
+            position: relative;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+            }
+
+        .img:hover{
+            box-shadow: 0px 0px 0px #000000;
+            z-index: 2;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1.5);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1.5);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1.5);
+            transition: all 200ms ease-in;
+            transform: scale(1.5);
+            }
+
+
+    </style>
+</head>
+<body style="background-color: #000000">
+
+<div class="top-pan">
+    <div class="img"><img alt="travel" src="{% static 'home/images/travel.jpg' %}" width="200" height="200"></div>
+    <div class="img"><img alt="art" src="{% static 'home/images/art.jpg' %}" width="200" height="200"></div>
+    <div class="img"><img alt="strange" src="{% static 'home/images/strange.jpg' %}" width="200" height="200"></div>
+    <div class="img"><img alt="you" src="{% static 'home/images/you.jpg' %}" width="200" height="200"></div>
+    <div class="img"><img alt="danger" src="{% static 'home/images/danger.jpg' %}" width="200" height="200"></div>
+    <div class="img"><img alt="style" src="{% static 'home/images/style.jpg' %}" width="200" height="200"></div>
+    <div class="img"><img alt="smart" src="{% static 'home/images/intelligence.jpg' %}" width="200" height="200"></div>
+</div>
+
+<div class="div-nav">
+    <ul>
+        <li><a href="http://127.0.0.1:8000/home/">Главная</a></li>
+        <li><a href="about_us">Про нас</a></li>
+        <li><a href="riddles">Загадки</a></li>
+        <li><a href="sketches">Эскизы</a></li>
+        <li><a href="join">Присоединиться</a></li>
+    </ul>
+</div>
+
+
+<footer class="footer">
+</footer>
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>

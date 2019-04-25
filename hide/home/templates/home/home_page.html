@@ -1,0 +1,38 @@
+{% extends 'home/wrapper.html'%}
+
+{% block title %}
+    Follow to hide
+{% endblock %}
+
+
+
+
+{% block style %}
+
+    <style>
+        .hide {
+            position: absolute;
+            left: 630px;
+            top: 350px;
+            filter: brightness(100%);
+            }
+
+        .ambassador{
+            position: absolute;
+            left: 1600px;
+            top: 420px;
+            }
+    </style>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+{% load static %}
+
+<img alt="hide" border="3" class="hide" src="{% static 'home/images/h.jpg' %}" width="650px" height="350px">
+<img alt="ambassador" border="3" class="ambassador" src="{% static 'home/images/people.jpg' %}" width="300px" height="600px">
+
+{% endblock %}
