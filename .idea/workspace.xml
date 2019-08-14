@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f8aa1d46-d6c1-42d9-9e91-6201a6bf0853" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hide/home/static/home/images/Paint.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hide/home/templates/home/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/hide/home/templates/home/home_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hide/home/templates/home/join_render.html" beforeDir="false" afterPath="$PROJECT_DIR$/hide/home/templates/home/join_render.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hide/home/templates/home/skeatch_render.html" beforeDir="false" afterPath="$PROJECT_DIR$/hide/home/templates/home/skeatch_render.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hide/home/templates/home/wrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/hide/home/templates/home/wrapper.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
